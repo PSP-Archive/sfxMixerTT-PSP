@@ -1,0 +1,55 @@
+
+-----------------------------------------------------------------------
+-                         sfxMixerTT-PSP                              -
+-                             README                                  -
+-               Programmed by Ville Helin in 2007                     -
+-----------------------------------------------------------------------
+
+
+1. DESCRIPTION
+
+Starting to program homebrew games for the PSP without access to a
+SFX mixing library is a bit boring, so here is sfxMixerTT-PSP.
+
+
+2. USAGE
+
+Throw this into your PSP homebrew project, and adjust:
+
+* Adjust and add SFX IDs to the ID list in sound.h
+* Add the corresponding 44100Hz, raw, mono, 16bit samples to the
+  sfxs array in sound.c.
+* Remove all references to mp3player, if you are not using it.
+
+You can have eight SFX samples playing concurrently, but feel free to
+reserve more hardware channels.
+
+Now, when your program starts, call soundInit(). And when you want
+to play a SFX, call soundPlaySFX().
+
+
+3. CONTACT
+
+If you have any questions, feel free to contact me at
+vhelin?iki.fi.
+
+
+4. TODO
+
+* Add support for 22050Hz SFX
+* Add more channels
+* Optimize the mixer loop
+* Add WAV loader
+
+
+5. HISTORY
+
+v1.0 (19-May-2007)
+ * The initial release.
+
+
+6. LEGAL STUFF
+
+You use this on your own risk. I don't take responsibility for anything.
+Also, sfxMixerTT-PSP is under GNU Lesser General Public Licence (LGPL),
+version 2.1, February 1999. See the file LICENSE for more information.
